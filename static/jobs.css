@@ -1,0 +1,35 @@
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.job-title {
+  height: 200px;
+  width: auto;
+}
+
+.title-text {
+  padding-top: 20px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-top: 20px;
+}
+
+.pages {
+  align-content: center;
+
+}
+
+.pages a {
+  margin: 20px;
+}

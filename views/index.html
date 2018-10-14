@@ -1,0 +1,43 @@
+% rebase('base.html')
+
+
+    <main role="main">
+        <br>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="jumbotron">
+                <div class="container">
+                  <h1 class="display-3">Welcome to Jobs</h1>
+                  <p>In need of some help or need to reach us? This page provides different job opportunities available in the market.
+                  Advertise a Job Vacancy for USD 10 for per months..  You are always welcome to come and visit.
+                  </p>
+                  <p><a class="btn btn-primary btn-lg" href="/about/" aria-roledescription="About">About</a></p>
+                </div>
+            </div>
+
+          <div class="row" >
+                  % for position in positions:
+                     <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div  class="job-title" style="background: {{position['color']}}"><div class="title-text">{{position['title']}}</div></div>
+                          <p class="card-text">{{position['company']}} offers you an opportunity as {{position['title']}} in their company. The location is {{position['location']}}</p>
+                            <small class="text-muted">{{position['timestamp']}}</small>
+                            <br>
+                              <a href="/positions/{{position['id']}}/" style="margin-left: 70%" class="btn btn btn-outline-success">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                  % end
+              <hr>
+              <div class="pages">
+
+                  <a href="{{previous}}" class="btn btn-outline-primary"> << Previous</a>
+                  <a href="{{next}}" class="btn btn-outline-primary">  Next Page >> </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
